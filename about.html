@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About-Us Margdata</title>
+        <link rel="icon" type="image/png" href="images/margdata - Copy.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <div id="preloader">
+        <img src="images/margdata.png" alt="Loading..." class="loader-logo">
+    </div>
+
+    <header class="header">
+        <div class="header-left">
+            <img src="images/margdata.png" alt="Margdata Logo">
+        </div>
+        <div class="header-right">
+            <div class="header-info">
+                <div><i class="fas fa-heart"></i> <b><a href="#">Register Now</a></b></div>
+                <div><i class="fas fa-phone"></i> <a href="tel:+911234567890">+91 9794442599 /+91 8542873259</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:Margdataup@gmail.com">Margdataup@gmail.com</a></div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://dashboard.margdata.in/donation/login/">Member List</a></li>
+            <li><a href="https://dashboard.margdata.in/donation/login/">Sahyog List</a></li>
+            <li><a href="https://dashboard.margdata.in/donation/register/">Registration</a></li>
+            <li><a href="niyamwali.html">Niyamawali</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <div id="google_translate_element"></div>
+            <a href="https://dashboard.margdata.in/donation/login/" class="login-btn">LOGIN</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'hi', includedLanguages: "hi,en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+    </nav>
+
+    <style>
+      
+        /* Hero Section */
+        .hero-header {
+            position: relative;
+            height: 60vh;
+            background: url('images/close-up-shot-of-african-american-middle-aged-adu-HDBMCVT.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        /* Fade Overlay */
+        .hero-header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .breadcrumb {
+            background: none;
+            justify-content: center;
+        }
+        .breadcrumb a {
+            color: #FFC107;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        /* Brush Stroke Effect */
+        .brush-stroke {
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            height: 80px;
+            background: url('images/banner-one-shape.png') no-repeat center center / cover;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-header {
+                height: 40vh;
+            }
+            .hero-content h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <div class="hero-header">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="brush-stroke"></div>
+    </div>
+
+    <div class="floating-chat">
+        <!-- Main Message Button -->
+        <div id="chat-button" class="chat-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+    
+        <!-- Contact Options -->
+        <div class="chat-options">
+            <a href="https://chat.whatsapp.com/J9hbcTehn6w8MCLlwVcUft" target="_blank" class="chat-option whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://t.me/+5-FCjrwrSSU0NDk1" target="_blank" class="chat-option telegram">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+        </div>
+    </div>
+    <!-- SPLIT SECTION -->
+<section class="about-section">
+    
+    <div class="about-container"> <!-- Updated class name -->
+        <div class="row align-items-center">
+            
+            <!-- Left Side: Images & Video -->
+            <div class="col-lg-6 col-md-12 about-images">
+                <div class="donation-bar">
+                    <p>we give <span>donations</span> to poor people</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/marlis-trio-akbar-eMB60hNHFL8-unsplash.jpg" class="image-main" alt="Main Image">
+                    <a href="#" class="play-button"><i class="fas fa-play"></i></a>
+                    <img src="images/poor-7302954_1280.jpg" class="image-small" alt="Small Image">
+                </div>
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="col-lg-6 col-md-12 about-content">
+                <p class="donation-text"><i class="fas fa-hand-holding-heart"></i> Start Donating for Helpless People</p>
+                <h2>Margdata क्या है?</h2>
+                <p>
+                    पारस्परिक सहयोग भावना परस्पर सहयोग करें। जब अचानक किसी परिवार में कमाने वाले सदस्य का निधन हो जाता है तो उसके परिजनों के सामने घोर आर्थिक संकट उत्पन्न हो जाता है। 
+                    विशेषकर उन नौकरीपेशा परिवारों के सामने जिनके पास वेतन के अतिरिक्त आय का कोई अन्य साधन उपलब्ध नही होता है। ऐसी स्थिति से निपटने के लिए मार्गदाता ट्रस्ट सकारात्मक भूमिका निभा रहा है।
+                    <br><br>
+                    मार्गदाता ट्रस्ट "सबका सहयोग, सबके लिए सहयोग, सबके द्वारा सहयोग" की पारस्परिक सहयोग भावना के तहत इन विषम परिस्थितियों में अपने सदस्यों को आर्थिक सहयोग हेतु प्रेरित कर प्रभावित परिवार की आर्थिक सहयोग की अपील करता है।
+                    <br><br>
+                    स्वेच्छा से सभी नियमों व शर्तो से सहमति के उपरांत ट्रस्ट की वेबसाइट <a href="#">www.margdata.com</a> के माध्यम से रजिस्ट्रेशन करके जुड़ सकते हैं एवं परस्पर सहयोग कर सकते हैं। 
+                    MD TRUST से जुड़ने हेतु किसी प्रकार का सदस्यता शुल्क नही लिया जाता है। सदस्यता पूरी तरह निशुल्क है।
+                </p>
+
+                <!-- Bullet Points -->
+                <div class="help-section">
+                    <div class="help-box">
+                        <i class="fas fa-hands-helping"></i>
+                        <p>सहयोग करें और जरूरतमंदों की मदद करें।</p>
+                    </div>
+                    <div class="help-box">
+                        <i class="fas fa-donate"></i>
+                        <p>दानी बनें और मार्गदाता ट्रस्ट का हिस्सा बनें।</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="ctan-section">
+                    <a href="#" class="btn more-about">More About Us</a>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i> <span>+236 (456) 896 22</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</section>
+
+<section class="about-section-new">
+    <img src="images/team_bg_shape3_3.png" class="animated-hand hand-top-left" alt="Hand Top Left">
+    <img src="images/team_bg_shape3_4.png" class="animated-hand hand-top-right" alt="Hand Top Right">
+    <div class="about-container-new">
+        <div class="about-content-new">
+            <h2>Margdata का लक्ष्य</h2>
+            <p>पारस्परिक सहयोग भावना परस्पर सहयोग करें। जब अचानक किसी परिवार में कमाने वाले सदस्य का निधन हो जाता है तो उसके परिजनों के सामने घोर आर्थिक संकट उत्पन्न हो जाता है। विशेषकर उन नौकरीपेशा परिवारों के सामने जिनके पास वेतन के अतिरिक्त आय का कोई अन्य साधन उपलब्ध नही होता है।</p>
+            <p>ऐसी स्थिति से निपटने के लिए मार्गदाता ट्रस्ट सकारात्मक भूमिका निभा रहा है। मार्गदाता ट्रस्ट "सबका सहयोग, सबके लिए सहयोग, सबके द्वारा सहयोग की पारस्परिक सहयोग भावना के तहत इन विषम परिस्थितियों मे अपने सदस्यों को आर्थिक सहयोग हेतु प्रेरित कर प्रभावित परिवार की आर्थिक सहयोग की अपील करता है।</p>
+            <p>स्वेच्छा से सभी नियमों व शर्तो से सहमति के उपरांत ट्रस्ट की वेवसाइट  htt/MD TRUST. COM के माध्यम से रजिस्ट्रेशन करके जुड़ सकते है एवं परस्पर सहयोग कर सकते है।</p>
+        </div>
+
+        <div class="about-content-new">
+            <h2>मार्गदाता ट्रस्ट का सदस्य कौन- कौन बन सकता है?</h2>
+            <ul>
+                <li>भारत का नागरिक हो जिसकी उम्र कम से कम 18 वर्ष एवं अधिकतम 55 वर्ष आयु का हो। </li>
+                <li>केंद्रीय विभाग रेलवे, डाक, एयरफोर्स एवं समस्त केंद्रीय विभागों के सरकारी कर्मचारी/अधिकारी या विभागों के संविदा कर्मचारी/अधिकारी सदस्य बन सकते हैं।</li>
+                <li> केंद्रीय विद्यालय के शिक्षक व शिक्षणेत्तर कर्मचारी, तकनीकी शिक्षा के शिक्षक व शिक्षणेत्तर कर्मचारी, उच्च शिक्षा के शिक्षणेत्तर कर्मचारी, समस्त विभागों के सरकारी कर्मचारी/अधिकारी या समस्त विभागों के संविदा कर्मचारी/अधिकारी सदस्य बन सकते हैं।</li>
+                <li>किसी भी केंद्रीय/राज्य/यूनिवर्सिटी/राज्य स्तरीय विद्यालय/कॉलेज/माध्यमिक विद्यालय/मदरसा/हॉस्पिटल इत्यादि में सरकारी/प्राइवेट जॉब करने वाले समस्त शिक्षक, क्लर्क, चपरासी, प्रधानाचार्य, प्राचार्य, प्रोफेसर, नर्स, कंपाउंडर डॉक्टर, इंजीनियर या कोई अन्य कर्मचारी/अधिकारी सदस्य बन सकता है।
+                </li>
+            </ul>
+        </div>
+    </div>
+    <img src="images/team_bg_shape3_5.png" class="animated-hand hand-bottom-left" alt="Hand Bottom Left">
+        <img src="images/team_bg_shape3_6.png" class="animated-hand hand-bottom-right" alt="Hand Bottom Right">
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo">
+            <img src="images/margdata.png" alt="Logo">
+            <p>Our secure online donation platform allows you to make contributions quickly and safely.</p>
+            <button class="btn btn-success">Donate Now</button>
+        </div>
+        <div class="footer-column">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+                <li><a href="https://dashboard.margdata.in/donation/login/">Member List</a></li>
+                <li><a href="https://dashboard.margdata.in/donation/login/">Varshik Dan Suchi</a></li>
+                <li><a href="https://dashboard.margdata.in/donation/login/">Sahyog List</a></li>
+                <li><a href="niyamwali.html">Niyamawali</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">District President List</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-contact">
+            <h5>Contact Us</h5>
+            <p><i class="fas fa-phone"></i> +91 9794442599   +91 8542873259</p>
+            <p><i class="fas fa-envelope"></i> info@margdata.in</p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/share/164BbWVRzo/"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/+5-FCjrwrSSU0NDk1"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <p>&copy; 2025 <span>Margdata Trust</span>. All Rights Reserved.</p>
+</div>
+<div class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

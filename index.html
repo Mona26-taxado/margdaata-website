@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margdata</title>
+    <link rel="icon" type="image/png" href="images/margdata - Copy.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="preloader">
+        <img src="images/margdata.png" alt="Loading..." class="loader-logo">
+    </div>
+    <header class="header">
+        <div class="header-left">
+            <img src="images/margdata.png" alt="Margdata Logo">
+        </div>
+        <div class="header-right">
+            <div class="header-info">
+                <div><i class="fas fa-heart"></i> <b><a href="https://dashboard.margdata.in/donation/register/">Register Now</a></b></div>
+                <div><i class="fas fa-phone"></i> <a href="tel:+919794442599">+91 9794442599 /+91 8542873259</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:Margdataup@gmail.com">Margdataup@gmail.com</a></div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://dashboard.margdata.in/donation/login/">Member List</a></li>
+            <li><a href="https://dashboard.margdata.in/donation/login/">Sahyog List</a></li>
+            <li><a href="https://dashboard.margdata.in/donation/register/">Registration</a></li>
+            <li><a href="niyamwali.html">Niyamawali</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <div id="google_translate_element"></div>
+            <a href="https://dashboard.margdata.in/donation/login/" class="login-btn">LOGIN</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'hi', includedLanguages: "hi,en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+    </nav>
+    
+    <!-- Loader Container -->
+
+
+
+<!-- hero -->
+<section class="hero">
+    
+    <!-- Slideshow Background -->
+    <div class="hero-bg">
+        <img src="images/hero-img-2.jpg" alt="Slide 1" class="active" />
+        <img src="images/hero-img-1.jpg" alt="Slide 2" />
+        <img src="images/hero-3.jpg" alt="Slide 3" />
+    </div>
+  
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+  
+    <!-- Text Content -->
+    <div class="hero-content">
+        
+        <div class="donation-text">
+           
+            <i class="fas fa-hand-holding-heart"></i> "पारस्परिक सहयोग भावना से परस्पर सहयोग करें।"
+        </div>
+        <h1>"सबका सहयोग, सबके लिए&nbsp;<span class="highlight">सहयोग</span>&nbsp; सबके द्वारा सहयोग"</h1>
+        <div class="hero-buttons">
+            <a href="https://dashboard.margdata.in/donation/register/" class="register-btn">REGISTER NOW</a>
+            <a href="https://dashboard.margdata.in/donation/login/" class="Login-btn">LOGIN</a>
+        </div>
+        
+        
+    </div>
+    <img src="images/team_bg_shape3_4.png" class="animated-hand hand-top-right" alt="Hand Top Right">
+    <!-- Brush Stroke Effect -->
+    <div class="hero-brush"></div>
+    
+</section>
+<div class="floating-chat">
+    <!-- Main Message Button -->
+    <div id="chat-button" class="chat-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Contact Options -->
+    <div class="chat-options">
+        <a href="https://chat.whatsapp.com/J9hbcTehn6w8MCLlwVcUft" target="_blank" class="chat-option whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://t.me/+5-FCjrwrSSU0NDk1" target="_blank" class="chat-option telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+    </div>
+</div>
+
+  
+  <script>
+    const slides = document.querySelectorAll('.hero-bg img');
+    let currentSlide = 0;
+    const slideInterval = 7000; // how long each slide is shown (in ms)
+  
+    setInterval(() => {
+      // Remove 'active' from current slide
+      slides[currentSlide].classList.remove('active');
+      // Move to the next slide index
+      currentSlide = (currentSlide + 1) % slides.length;
+      // Add 'active' to the new current slide
+      slides[currentSlide].classList.add('active');
+    }, slideInterval);
+  </script>
+  
+<!-- SPLIT SECTION -->
+<section class="about-section">
+    <div class="about-container"> <!-- Updated class name -->
+        <!-- SVG Animated Element -->
+        
+        <div class="row align-items-center">
+            
+            <!-- Left Side: Images & Video -->
+            <div class="col-lg-6 col-md-12 about-images">
+                <div class="donation-bar">
+                    <p> "पारस्परिक सहयोग<span>भावना से</span> परस्पर सहयोग करें।"</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/close-up-shot-of-african-american-middle-aged-adu-HDBMCVT.jpg" class="image-main" alt="Main Image">
+                    <a href="#" class="play-button"><i class="fas fa-play"></i></a>
+                    <img src="images/vl-cause-1.1.png" class="image-small" alt="Small Image">
+                </div>
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="col-lg-6 col-md-12 about-content">
+                <p class="donation-text"><i class="fas fa-hand-holding-heart"></i>"पारस्परिक सहयोग भावना से परस्पर सहयोग करें।"</p>
+                <h2>Margdata क्या है?</h2>
+                <p>
+                    पारस्परिक सहयोग भावना परस्पर सहयोग करें। जब अचानक किसी परिवार में कमाने वाले सदस्य का निधन हो जाता है तो उसके परिजनों के सामने घोर आर्थिक संकट उत्पन्न हो जाता है। 
+                    विशेषकर उन नौकरीपेशा परिवारों के सामने जिनके पास वेतन के अतिरिक्त आय का कोई अन्य साधन उपलब्ध नही होता है। ऐसी स्थिति से निपटने के लिए मार्गदाता ट्रस्ट सकारात्मक भूमिका निभा रहा है।
+                    <br><br>
+                    मार्गदाता ट्रस्ट "सबका सहयोग, सबके लिए सहयोग, सबके द्वारा सहयोग" की पारस्परिक सहयोग भावना के तहत इन विषम परिस्थितियों में अपने सदस्यों को आर्थिक सहयोग हेतु प्रेरित कर प्रभावित परिवार की आर्थिक सहयोग की अपील करता है।
+                    <br><br>
+                    स्वेच्छा से सभी नियमों व शर्तो से सहमति के उपरांत ट्रस्ट की वेबसाइट <a href="#">www.margdata.in</a> के माध्यम से रजिस्ट्रेशन करके जुड़ सकते हैं एवं परस्पर सहयोग कर सकते हैं। 
+                    MD TRUST से जुड़ने हेतु किसी प्रकार का सदस्यता शुल्क नही लिया जाता है। सदस्यता पूरी तरह निशुल्क है।
+                </p>
+
+                <!-- Bullet Points -->
+                <div class="help-section">
+                    <div class="help-box">
+                        <i class="fas fa-hands-helping"></i>
+                        <p>सहयोग करें और जरूरतमंदों की मदद करें।</p>
+                    </div>
+                    <div class="help-box">
+                        <i class="fas fa-donate"></i>
+                        <p>दानी बनें और मार्गदाता ट्रस्ट का हिस्सा बनें।</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="ctan-section">
+                    <a href="about.html" class="btn more-about">More About Us</a>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i> <span>+91 9794442599</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</section>
+
+
+
+  <!-- HERO SECTION (Fixed Background with Text Inside) -->
+
+
+
+
+
+<section class="member-register">
+    <div class="left-decoration"></div>
+    <div class="video-section">
+        <img src="your-video-thumbnail.jpg" alt="Video Thumbnail">
+    </div>
+    <div class="register-info">
+        <h2>Member Register Till now</h2>
+        <div class="register-count">
+            <span>✋</span> 8522
+        </div>
+        <a href="https://dashboard.margdata.in/donation/register/" class="register-btn">REGISTER NOW</a>
+    </div>
+  </section>
+
+  <section class="why-choose-section">
+    <div class="text-content">
+        <h2><span class="highlight">रक्तदान:</span> जीवन बचाने का एक पुनीत कार्य</h2>
+        <p>रक्तदान केवल एक दान नहीं, बल्कि एक जीवन देने की प्रक्रिया है। मार्गदाता ट्रस्ट इस नेक कार्य को बढ़ावा देने के लिए प्रतिबद्ध है, ताकि जरूरतमंद लोगों को समय पर रक्त उपलब्ध हो सके और अनगिनत जीवन बचाए जा सकें।</p>
+        <div class="progress-bars">
+            <p>Blood Donate <span>55%</span></p>
+            <div class="progress-bar donations-bar"><span></span></div>
+            <p>Charity <span>85%</span></p>
+            <div class="progress-bar charity-bar"><span></span></div>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-globe"></i>
+                <div>
+                    <h5>वैश्विक समुदाय:</h5>
+                    <p>एकजुटता, सहयोग, मानवता, समर्थन, सेवा।</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="icon-bg"><img src="images/healthcare.ec8b5207.svg"/></div>
+                <div>
+                    <h5>क्राउडफंडिंग:</h5>
+                    <p>सामूहिक वित्तपोषण, जनसहयोग, निधि संग्रह, सामूहिक दान।</p>
+                </div>
+            </div>
+        </div>
+        <a href="https://dashboard.margdata.in/donation/register/" class="learn-more-btn">Donate Blood</a>
+    </div>
+    <div class="image-section">
+        <img src="images/nguy-n-hi-p-sTTeaN4wwrU-unsplash.jpg" alt="Community Support">
+        <img src="images/faq-shape2-1.png" class="stroke" alt="Brush Stroke">
+    </div>
+</section>
+
+  <section class="margdata-section">
+    <div class="margdata-content">
+        <!-- Left Side: Bank Details + QR Code -->
+        <div class="margdata-left">
+            <h2>Margdata Trust का सदस्य कैसे बनें?</h2>
+            <p>NAME – MARGDATA TRUST</p>
+            <p>ACCOUNT NO – 43861858721</p>
+            <p>IFSC – SBIN0016882</p>
+            <p>BRANCH – SBI HAZRATGANJ, LUCKNOW</p>
+            <p>OR</p>
+            <img class="qr-code" src="images/QR.jpg" alt="Scan & Pay">
+            <br>
+            <a href="https://dashboard.margdata.in/donation/register/" class="btn-register">REGISTER NOW</a>
+        </div>
+
+        <!-- Right Side: Steps to Register -->
+        <div class="margdata-right">
+            <p class="donation-text"><i class="fas fa-hand-holding-heart"></i>"पारस्परिक सहयोग भावना से परस्पर सहयोग करें।"</p>
+            <h2>Margdata ट्रस्ट का सदस्य कैसे बनें?</h2>
+            <ul class="instructions">
+                <li>📱 &nbsp;<strong>अपने मोबाइल में किसी भी ब्राउज़र को खोलें।</strong></li>
+                <li>🌐 &nbsp;<strong>Google Chrome / अन्य किसी भी ब्राउज़र में</strong> &nbsp;<a href="https://margdata.in" target="_blank">www.margdata.in</a> <strong>&nbsp;खोलें।</strong></li>
+                <li>📝 &nbsp;<a href="https://margdata.in" target="_blank">https://margdata.in</a>&nbsp; <strong>पर जाकर REGISTRATION को क्लिक करें।</strong></li>
+                <li>💳 &nbsp;<strong>ट्रस्ट के खाते में 100 रुपये भेजकर ट्रांजैक्शन ID प्राप्त करें।</strong></li>
+                <li>📩 &nbsp;<strong>रजिस्ट्रेशन फॉर्म में सभी आवश्यक जानकारी भरें और ट्रांजैक्शन स्क्रीनशॉट अपलोड करें।</strong></li>
+                <li>✅ &nbsp;<strong>रजिस्ट्रेशन फॉर्म REGISTER करने के बाद MEMBER LIST में अपना नाम देख सकते हैं।</strong></li>
+                <li>📞 &nbsp;<strong>किसी भी समस्या के लिए हेल्पलाइन नंबर</strong> &nbsp;<a href="tel:9044756701"><strong>&nbsp;9044756701</strong>&nbsp;</a> <strong>पर संपर्क करें।</strong></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Membership FAQ Section -->
+  <!-- Membership Section -->
+  <section class="membership-section">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <p class="donation-text"><i class="fas fa-hand-holding-heart"></i>"पारस्परिक सहयोग भावना से परस्पर सहयोग करें।"</p>
+            <!-- Left Side: Membership Content -->
+            <div class="col-lg-6 col-md-12 membership-content">
+                <h2><b>MARGDATA ट्रस्ट का सदस्य कौन- कौन बन सकता है?</b></h2>
+                <p>भारत का नागरिक हो जिसकी उम्र कम से कम 18 वर्ष एवं अधिकतम 55 वर्ष आयु का हो।</p>
+
+                <!-- Simple List -->
+                <ul class="membership-list">
+                    <li>✅ केंद्रीय विभाग रेलवे, डाक, एयरफोर्स</li>
+                    <li>✅ केंद्रीय विभागों के सरकारी कर्मचारी/अधिकारी</li>
+                    <li>✅ विभागों के संविदा कर्मचारी/अधिकारी</li>
+                    <li>✅ केंद्रीय विद्यालय के शिक्षक व शिक्षणेत्तर कर्मचारी</li>
+                    <li>✅ तकनीकी शिक्षा के शिक्षक व शिक्षणेत्तर कर्मचारी</li>
+                    <li>✅ सरकारी/प्राइवेट जॉब करने वाले समस्त शिक्षक</li>
+                    <li>✅ क्लर्क, चपरासी, प्रधानाचार्य, प्राचार्य, प्रोफेसर, नर्स, कंपाउंडर, डॉक्टर, इंजीनियर</li>
+                </ul>
+
+                <!-- Telegram Join Button -->
+                <div class="text-center mt-4">
+                    <a href="https://t.me/+5-FCjrwrSSU0NDk1" class="btn telegram-btn">CLICK HERE TO TELEGRAM JOIN</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Image & Shape -->
+            <div class="col-lg-6 col-md-12 faq-image-section">
+                <div class="faq-image-wrapper">
+                    <img src="images/01.jpg" class="faq-image large" alt="Family 1">
+                    <img src="images/vl-cause-1.3.png" class="faq-image small" alt="Family 2">
+                    <div class="yellow-line"></div>
+                </div>
+                <div class="faq-shape"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+  <!--  SECTION 3rd -->
+  <section class="cta-section">
+    <h2>कोई जानकारी या सूचना कहां से प्राप्त होगा?</h2>
+    <p>कोई जानकारी या सूचना हेतु अपने अधिकृत Margdata Trust व्हाट्सएप ग्रुप से जुड़ जाएं। 
+        समय समय पर वेबसाइट भी विजिट करते रहें।<br/>
+        इसके साथ हेल्पलाइन नंबर पर फोन करके भी कोई जानकारी या सूचना प्राप्त कर सकते हैं।
+    </p>
+    <a href="https://dashboard.margdata.in/donation/register/" class="cta-btn">Register Now <i class="fas fa-arrow-right"></i></a>
+
+    <!-- Hand Images -->
+    <img src="images/cta_shape2_3.png" class="hand-left" alt="Hand Left">
+    
+    <img src="images/cta_shape2_4.png" class="hand-right" alt="Hand Right">
+     <!-- Bottom Brush Stroke -->
+     <div class="bottom-brush"></div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo">
+            <img src="images/margdata.png" alt="Logo">
+            <p>Our secure online donation platform allows you to make contributions quickly and safely.</p>
+            <button class="btn btn-success">Donate Now</button>
+        </div>
+        <div class="footer-column">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+                <li><a href="https://dashboard.margdata.in/donation/login/">Member List</a></li>
+                <li><a href="https://dashboard.margdata.in/donation/login/">Varshik Dan Suchi</a></li>
+                <li><a href="https://dashboard.margdata.in/donation/login/">Sahyog List</a></li>
+                <li><a href="niyamwali.html">Niyamawali</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">District President List</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-contact">
+            <h5>Contact Us</h5>
+            <p><i class="fas fa-phone"></i> +91 9794442599   +91 8542873259</p>
+            <p><i class="fas fa-envelope"></i> info@margdata.in</p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/share/164BbWVRzo/"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/+5-FCjrwrSSU0NDk1"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <p>&copy; 2025 <span>Margdata Trust</span>. All Rights Reserved.</p>
+</div>
+<div class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatButton = document.getElementById("chat-button");
+        const floatingChat = document.querySelector(".floating-chat");
+        const chatOptions = document.querySelectorAll(".chat-option");
+
+        chatButton.addEventListener("click", function () {
+            floatingChat.classList.toggle("open");
+
+            // Animate each option with delay for a staggered effect
+            chatOptions.forEach((option, index) => {
+                if (floatingChat.classList.contains("open")) {
+                    setTimeout(() => {
+                        option.style.opacity = "1";
+                        option.style.transform = `translateY(0) scale(1)`;
+                    }, index * 100);
+                } else {
+                    option.style.opacity = "0";
+                    option.style.transform = `translateY(20px) scale(0.8)`;
+                }
+            });
+
+            // Toggle icon between chat and close
+            const icon = this.querySelector("i");
+            if (icon.classList.contains("fa-comments")) {
+                icon.classList.remove("fa-comments");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fa-times");
+                icon.classList.add("fa-comments");
+            }
+        });
+    });
+</script>
+
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
