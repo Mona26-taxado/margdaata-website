@@ -2110,12 +2110,12 @@ section.membership-section {
   position: relative;
 }
 .image-section .stroke {
-position: absolute;
-top: -8px;
-left: 0px;
-width: 95px;
-height: auto;
-z-index: 0;
+  position: absolute;
+  top: -8px;
+  left: -12px;
+  width: 125px;
+  height: auto;
+  z-index: 0;
 }
 @media (max-width: 768px) {
   .why-choose-section {

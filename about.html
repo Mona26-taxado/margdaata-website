@@ -21,8 +21,8 @@
         </div>
         <div class="header-right">
             <div class="header-info">
-                <div><i class="fas fa-heart"></i> <b><a href="#">Register Now</a></b></div>
-                <div><i class="fas fa-phone"></i> <a href="tel:+911234567890">+91 9794442599 /+91 8542873259</a></div>
+                <div><i class="fas fa-heart"></i> <b><a href="https://dashboard.margdata.in/donations/register/">Register Now</a></b></div>
+                <div><i class="fas fa-phone"></i> <a href="tel:+919250348657">+91 9250348657</a></div>
                 <div><i class="fas fa-envelope"></i> <a href="mailto:Margdataup@gmail.com">Margdataup@gmail.com</a></div>
             </div>
         </div>
@@ -186,9 +186,9 @@
 
                 <!-- Call to Action -->
                 <div class="ctan-section">
-                    <a href="#" class="btn more-about">More About Us</a>
+                    <a href="#" class="btn more-about">REGISTER NOW</a>
                     <div class="contact-info">
-                        <i class="fas fa-phone"></i> <span>+236 (456) 896 22</span>
+                        <i class="fas fa-phone"></i> <span>+919250348657</span>
                     </div>
                 </div>
             </div>
@@ -253,12 +253,45 @@
     </div>
 </footer>
 <div class="footer-bottom">
-    <p>&copy; 2025 <span>Margdata Trust</span>. All Rights Reserved. Desined by <a href="https://blastercode.com/">
+    <p>&copy; 2025 <span>Margdata Trust</span>. All Rights Reserved. Designed by <a href="https://blastercode.com/"><span>blastercode</span></a></p>
 </div>
 <div class="scroll-to-top" onclick="scrollToTop()">
     <i class="fas fa-arrow-up"></i>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatButton = document.getElementById("chat-button");
+        const floatingChat = document.querySelector(".floating-chat");
+        const chatOptions = document.querySelectorAll(".chat-option");
 
+        chatButton.addEventListener("click", function () {
+            floatingChat.classList.toggle("open");
+
+            // Animate each option with delay for a staggered effect
+            chatOptions.forEach((option, index) => {
+                if (floatingChat.classList.contains("open")) {
+                    setTimeout(() => {
+                        option.style.opacity = "1";
+                        option.style.transform = `translateY(0) scale(1)`;
+                    }, index * 100);
+                } else {
+                    option.style.opacity = "0";
+                    option.style.transform = `translateY(20px) scale(0.8)`;
+                }
+            });
+
+            // Toggle icon between chat and close
+            const icon = this.querySelector("i");
+            if (icon.classList.contains("fa-comments")) {
+                icon.classList.remove("fa-comments");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fa-times");
+                icon.classList.add("fa-comments");
+            }
+        });
+    });
+</script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="js/script.js"></script>
 </body>
