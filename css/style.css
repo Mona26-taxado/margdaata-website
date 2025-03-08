@@ -2569,3 +2569,6 @@ body {
   align-items: center;
   gap: 15px; /* Space between select language and login */
 }
+span.address {
+  color: #ff0000;
+}
