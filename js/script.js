@@ -29,6 +29,6 @@ let images = document.querySelectorAll(".slider img");
         window.onload = function() {
             setTimeout(function() {
                 document.getElementById("preloader").style.display = "none";
-            }, 3000); // Adjust time as needed
+            }, 2000); // Adjust time as needed
         };
 
