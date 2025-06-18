@@ -2574,6 +2574,8 @@ iframe#\:2\.container {
   display: none!important;
 }
 
+
+
 body {
   top: 0px !important;
   position: relative;
@@ -2586,3 +2588,30 @@ body {
 span.address {
   color: #ff0000;
 }
+
+
+
+
+.PaymentButton--rzp-dark-standard.svelte-ekc7fv.svelte-ekc7fv {
+    background: #055c02 !important;
+    border-color: #072654;
+}
+
+.PaymentButton--rzpTheme.svelte-ekc7fv.svelte-ekc7fv::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 47px;
+    height: 100%;
+    background: #068020!important;
+    border-radius: 2px 0 0 2px;
+    transform: skew(-15deg, 0);
+}
+
+span.razorpay-payment-button.svelte-ohbfj8 {
+    margin-top: 16px;
+    /* border-radius: 35px; */
+}
+
+
