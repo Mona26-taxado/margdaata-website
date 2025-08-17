@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्रद्धांजलि - मार्गदाता ट्रस्ट</title>
+    <link rel="icon" type="image/png" href="images/margdata - Copy.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tribute-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .stats {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .stats h4 {
+            color: #0b2501;
+            margin-bottom: 10px;
+        }
+        .stats .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFC107;
+        }
+        
+        .tribute-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .tribute-header {
+            background: linear-gradient(135deg, #0b2501 0%, #1a4a02 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .tribute-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #FFC107;
+        }
+        
+        .tribute-header .subtitle {
+            font-size: 1.2rem;
+            color: #FFC107;
+            margin-bottom: 20px;
+        }
+        
+        .tribute-content {
+            padding: 40px;
+            line-height: 1.8;
+        }
+        
+        .tribute-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        
+        .tribute-text.hindi {
+            font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+        }
+        
+        .tribute-text.english {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .members-list {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .members-list h3 {
+            color: #0b2501;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+        
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .member-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #FFC107;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .member-item .name {
+            font-weight: bold;
+            color: #0b2501;
+        }
+        
+        .member-item .amount {
+            color: #FFC107;
+            font-weight: bold;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #FFC107 0%, #FFD700 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            color: #0b2501;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b2501;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        
+        .contact-item i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 25px;
+            flex-shrink: 0;
+        }
+        
+        .contact-item span {
+            flex: 1;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            text-align: left;
+        }
+        
+        .tribute-footer {
+            background: #0b2501;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .tribute-footer .motto {
+            font-size: 1.3rem;
+            color: #FFC107;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .tribute-section {
+                padding: 60px 0;
+            }
+            
+            .tribute-container {
+                margin: 0 15px;
+                border-radius: 15px;
+            }
+            
+            .tribute-header {
+                padding: 25px 20px;
+            }
+            
+            .tribute-header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+            
+            .tribute-header .subtitle {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            
+            .tribute-content {
+                padding: 20px 15px;
+            }
+            
+            .tribute-text {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+            
+            .tribute-text h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+            
+            .stats {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .stats h4 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+            
+            .stats .number {
+                font-size: 1.5rem;
+            }
+            
+            .members-list {
+                padding: 20px 15px;
+                margin: 20px 0;
+            }
+            
+            .members-list h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .members-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .member-item {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+            
+            .member-item .name {
+                font-size: 0.9rem;
+            }
+            
+            .member-item .amount {
+                font-size: 0.9rem;
+            }
+            
+            .contact-info {
+                padding: 20px 15px;
+                margin-top: 20px;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .contact-details {
+                gap: 12px;
+                max-width: 100%;
+            }
+            
+            .contact-item {
+                font-size: 0.9rem;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+            
+            .contact-item i {
+                font-size: 1rem;
+                margin-right: 0;
+                margin-bottom: 5px;
+                width: auto;
+            }
+            
+            .contact-item span {
+                font-size: 0.9rem;
+                line-height: 1.4;
+                text-align: center;
+            }
+            
+            .tribute-footer {
+                padding: 20px 15px;
+            }
+            
+            .tribute-footer .motto {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            
+            .loading {
+                padding: 30px 15px;
+                font-size: 1rem;
+            }
+            
+            .error {
+                padding: 12px;
+                font-size: 0.9rem;
+                margin: 15px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tribute-section {
+                padding: 50px 0;
+            }
+            
+            .tribute-container {
+                margin: 0 10px;
+                border-radius: 12px;
+            }
+            
+            .tribute-header {
+                padding: 20px 15px;
+            }
+            
+            .tribute-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .tribute-header .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .tribute-content {
+                padding: 15px 10px;
+            }
+            
+            .tribute-text {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            .tribute-text h3 {
+                font-size: 1.1rem;
+            }
+            
+            .stats {
+                padding: 12px;
+            }
+            
+            .stats h4 {
+                font-size: 1rem;
+            }
+            
+            .stats .number {
+                font-size: 1.3rem;
+            }
+            
+            .members-list {
+                padding: 15px 10px;
+            }
+            
+            .members-list h3 {
+                font-size: 1.2rem;
+            }
+            
+            .member-item {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+            
+            .contact-info {
+                padding: 15px 10px;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+            
+            .contact-details {
+                gap: 10px;
+            }
+            
+            .contact-item {
+                font-size: 0.85rem;
+            }
+            
+            .contact-item i {
+                font-size: 0.9rem;
+                margin-bottom: 3px;
+            }
+            
+            .contact-item span {
+                font-size: 0.85rem;
+                line-height: 1.3;
+            }
+            
+            .tribute-footer {
+                padding: 15px 10px;
+            }
+            
+            .tribute-footer .motto {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <img src="images/margdata.png" alt="Loading..." class="loader-logo">
+    </div>
+
+    <!-- Desktop Header -->
+    <header class="header desktop-header">
+        <div class="header-left">
+            <img src="images/margdata.png" alt="Margdata Logo">
+        </div>
+        <div class="header-right">
+            <div class="header-info">
+                <div><i class="fas fa-heart"></i> <b><a href="https://dashboard.margdata.in/donations/register/">Register Now</a></b></div>
+                <div><i class="fas fa-phone"></i> <a href="tel:+919250348657">+91 9250348657</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:margdatatrust2025@gmail.com">margdatatrust2025@gmail.com</a></div>
+                <div><span class="address">Regd. Under Indian Trust Act 1882, Regd.No. :85/2025</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="header mobile-header">
+        <div class="header-left">
+            <img src="images/margdata.png" alt="Margdata Logo">
+        </div>
+        <div class="header-right">
+            <div class="header-info">
+                <div class="contact-line">
+                    <span><i class="fas fa-phone"></i> <a href="tel:+919250348657">+91 9250348657</a></span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:margdatatrust2025@gmail.com">margdatatrust2025@gmail.com</a></span>
+                </div>
+                <div class="registration-line">
+                    <span class="address">Regd. Under Indian Trust Act 1882, Regd.No. :85/2025</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://dashboard.margdata.in/donations/login/">Member List</a></li>
+            <li><a href="https://dashboard.margdata.in/donations/login/">Sahyog List</a></li>
+            <li><a href="https://dashboard.margdata.in/donations/register/">Registration</a></li>
+            <li><a href="niyamwali.html">Niyamawali</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <div id="google_translate_element"></div>
+            <a href="https://dashboard.margdata.in/donations/login/" class="login-btn">LOGIN</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'hi', includedLanguages: "hi,en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+    </nav>
+
+    <!-- Tribute Section -->
+    <section class="tribute-section">
+        <div class="tribute-container">
+            <div class="tribute-header">
+                <h1>मार्गदाता ट्रस्ट</h1>
+                <div class="subtitle">सबका सहयोग..सबके लिए सहयोग..सबके द्वारा सहयोग।</div>
+                <p>श्रद्धांजलि</p>
+            </div>
+            
+            <div class="tribute-content">
+                <div class="tribute-text hindi">
+                    <h3>स्वर्गीय शरदचंद्र जी को मार्गदाता परिवार की तरफ श्रद्धांजलि</h3>
+                    <p>जब आपने मार्गदाता परिवार की यात्रा आरंभ की थी, तब हमारा परिवार मात्र 51 सदस्यों का एक छोटा सा समूह था। और आज जब हमारी संख्या 220 तक पहुँच गई है तो यह आपके सपनों और परिश्रम का ही प्रतिबिंब है।</p>
+                    <p>आपका हमें अचानक छोड़ कर चले जाना हम सभी के लिए एक अपूरणीय क्षति है। यह सत्य है कि मृत्यु इस संसार का अटल नियम है।</p>
+                    <p>इन विपरीत परिस्थितियों में मार्गदाता परिवार के प्रत्येक सदस्य का एकजुट होकर साथ देना मानवता की जीवंत भावना को प्रकट करता है। छोटी हो या बड़ी, हर सदस्य द्वारा दी गई आर्थिक सहायता केवल राशि नहीं, बल्कि हृदय की वह सहानुभूति है जो मार्गदाता के "सेवा और एकता" के उद्देश्य को साकार करती है।</p>
+                    <p>हम शरदचंद्र जी के शोकाकुल परिवार के प्रति अपनी गहन संवेदनाएँ व्यक्त करते हैं। ईश्वर उन्हें इस दुख की घड़ी में सहनशक्ति प्रदान करे और स्वर्गीय शरदचंद्र जी की आत्मा को शांति मिले। हम उनके प्रति अपनी श्रद्धांजलि अर्पित करते हैं।</p>
+                </div>
+
+                <div class="tribute-text english">
+                    <h3>Tribute to Late Sharadchandra ji from Margdata Family</h3>
+                    <p>When you started the journey of Margdata family, our family was a small group of only 51 members. And today when our number has reached 220, it is a reflection of your dreams and hard work.</p>
+                    <p>Your sudden departure from us is an irreparable loss for all of us. It is true that death is the inevitable rule of this world.</p>
+                    <p>The united support of every member of Margdata family in these adverse circumstances reveals the living spirit of humanity. Be it small or big, the financial support given by every member is not just a sum of money, but the sympathy of the heart which realizes the objective of "service and unity" of Margdata.</p>
+                    <p>We express our deepest condolences to the bereaved family of Sharadchandra ji. May God give them the strength to endure this hour of grief and may the soul of late Sharadchandra ji rest in peace. We pay our tribute to him.</p>
+                </div>
+
+                <div class="stats" id="stats">
+                    <h4>समस्त मार्गदाता परिवार की ओर से</h4>
+                    <div>कुल सदस्य: <span class="number" id="totalMembers">0</span></div>
+                </div>
+
+                <div class="members-list">
+                    <h3>सहयोग सूची</h3>
+                    <div class="loading" id="loading">सहयोग सूची लोड हो रही है...</div>
+                    <div class="error" id="error" style="display: none;">सहयोग सूची लोड नहीं हो पाई। कृपया बाद में पुनः प्रयास करें।</div>
+                    <div class="members-grid" id="membersGrid"></div>
+                </div>
+
+                <div class="contact-info">
+                    <h3>मार्गदाता सहयोग टीम</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>हेल्पलाइन नंबर - 9250348657</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>ऑफिशियल वेबसाइट - www.margdata.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ऑफिशियल ईमेल - margdatatrust2025@gmail.com</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tribute-footer">
+                <div class="motto">Support from all.. Support for all.. Support by all.</div>
+                <p>सबका सहयोग..सबके लिए सहयोग..सबके द्वारा सहयोग।</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Method 1: Direct Google Sheets CSV URL (if sheet is public)
+        // Replace this with your actual Google Sheet URL
+        const GOOGLE_SHEETS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRm8FQbzF4keR39xb8PO_i2qoWS-l4tKV_TGNpyq5pRjBvVUoGCY9CPlE9DOBOueG0WdNERuy3ZIZXo/pub?output=csv';
+        
+        // Method 2: Fallback - Static data (if Google Sheets doesn't work)
+        const FALLBACK_DATA = {
+            totalMembers: 95,
+            totalAmount: 25000,
+            members: [
+                { sno: 1, name: "अमरजीत प्रसाद", amount: 500 },
+                { sno: 2, name: "शैलेश कुमार", amount: 200 },
+                { sno: 3, name: "संजय मिश्रा", amount: 501 },
+                { sno: 4, name: "उपेन्द्र कुमार", amount: 100 },
+                { sno: 5, name: "निर्भय कुमार", amount: 100 },
+                { sno: 6, name: "शैलेंद्र गौतम", amount: 200 },
+                { sno: 7, name: "अमर शर्मा", amount: 100 },
+                { sno: 8, name: "अनिल कुमार", amount: 100 },
+                { sno: 9, name: "प्रशांत कुमार", amount: 500 },
+                { sno: 10, name: "उपेन्द्र गौतम", amount: 100 },
+                { sno: 11, name: "श्रीनिवास प्रसाद", amount: 200 },
+                { sno: 12, name: "अमरजीत कुमार", amount: 100 },
+                { sno: 13, name: "दूधनाथ", amount: 150 },
+                { sno: 14, name: "चंद्रदेव वर्मा", amount: 500 },
+                { sno: 15, name: "संदीप कुमार", amount: 100 },
+                { sno: 16, name: "रवि पाठक", amount: 200 },
+                { sno: 17, name: "अली रजा", amount: 100 },
+                { sno: 18, name: "सन्नी कुमार निषाद", amount: 100 },
+                { sno: 19, name: "गौतम प्रसाद", amount: 101 },
+                { sno: 20, name: "डीपी सिंह", amount: 100 },
+                { sno: 21, name: "पीयूष कांत", amount: 100 },
+                { sno: 22, name: "रविकांत", amount: 200 },
+                { sno: 23, name: "सोनू सिद्धार्थ", amount: 100 },
+                { sno: 24, name: "संतोष कुमार", amount: 200 },
+                { sno: 25, name: "सिद्धांत कुमार", amount: 100 },
+                { sno: 26, name: "बृजेश मित्रा", amount: 200 },
+                { sno: 27, name: "पीयूष मोहित", amount: 100 },
+                { sno: 28, name: "इरशाद अहमद", amount: 500 },
+                { sno: 29, name: "बृजेश वर्मा", amount: 100 },
+                { sno: 30, name: "सुरेंद्र कुशवाहा", amount: 101 },
+                { sno: 31, name: "एन.के. सिंह", amount: 500 },
+                { sno: 32, name: "अक्षय कुमार", amount: 200 },
+                { sno: 33, name: "विनोद कुमार", amount: 100 },
+                { sno: 34, name: "नीतेश जायसवाल", amount: 100 },
+                { sno: 35, name: "वरुण कुमार", amount: 100 },
+                { sno: 36, name: "विजय कुमार व्यास", amount: 200 },
+                { sno: 37, name: "संजय कुमार", amount: 100 },
+                { sno: 38, name: "मधुराम वर्मा", amount: 200 },
+                { sno: 39, name: "सतीश चंद्रा", amount: 151 },
+                { sno: 40, name: "मनीष कुमार राय", amount: 100 },
+                { sno: 41, name: "आशीष कुमार", amount: 100 },
+                { sno: 42, name: "महमूद अली", amount: 100 },
+                { sno: 43, name: "महेंद्र मीणा", amount: 201 },
+                { sno: 44, name: "कमलेश यादव", amount: 100 },
+                { sno: 45, name: "बशरत अली", amount: 500 },
+                { sno: 46, name: "इल्तिज़ा हुसैन", amount: 100 },
+                { sno: 47, name: "रंजीत कुमार", amount: 150 },
+                { sno: 48, name: "महेश कुमार", amount: 200 },
+                { sno: 49, name: "महेश राज पासी", amount: 200 },
+                { sno: 50, name: "विजय यादव", amount: 100 },
+                { sno: 51, name: "कल्लूद्दीन अंसारी", amount: 100 },
+                { sno: 52, name: "रवींद्र कुमार यादव", amount: 200 },
+                { sno: 53, name: "अजय कुमार निषाद", amount: 100 },
+                { sno: 54, name: "आदर्श शर्मा", amount: 100 },
+                { sno: 55, name: "श्रवण शर्मा", amount: 100 },
+                { sno: 56, name: "ओंकार मौर्य", amount: 200 },
+                { sno: 57, name: "अजय कुमार", amount: 100 },
+                { sno: 58, name: "रंगीलाल", amount: 100 },
+                { sno: 59, name: "इम्तियाज अहमद", amount: 151 },
+                { sno: 60, name: "रंजीत राव", amount: 100 },
+                { sno: 61, name: "अरविंद कुमार", amount: 399 },
+                { sno: 62, name: "आशीष शुक्ला", amount: 100 },
+                { sno: 63, name: "आजाद सिंह गौतम", amount: 200 },
+                { sno: 64, name: "अभिषेक मिश्रा", amount: 101 },
+                { sno: 65, name: "रंजीत शर्मा", amount: 100 },
+                { sno: 66, name: "मनोज प्रजापति", amount: 100 },
+                { sno: 67, name: "यशपाल गौतम", amount: 100 },
+                { sno: 68, name: "बिपिन कुमार", amount: 200 },
+                { sno: 69, name: "शैलेंद्र कुमार प्रजापति", amount: 100 },
+                { sno: 70, name: "कैलाश विश्वकर्मा", amount: 100 },
+                { sno: 71, name: "सौरभ श्रीवास्तव", amount: 100 },
+                { sno: 72, name: "विनय खरवार", amount: 100 },
+                { sno: 73, name: "रामशब्द पाल", amount: 100 },
+                { sno: 74, name: "प्रदीप आर्य", amount: 150 },
+                { sno: 75, name: "आनंद कुमार", amount: 100 },
+                { sno: 76, name: "मिंटू सिंह", amount: 100 },
+                { sno: 77, name: "मोहम्मद मेराज", amount: 100 },
+                { sno: 78, name: "प्रदीप कुमार", amount: 100 },
+                { sno: 79, name: "अर्जुन वर्मा", amount: 100 },
+                { sno: 80, name: "आशीष कुमार", amount: 100 },
+                { sno: 81, name: "सतीश वर्मा", amount: 100 },
+                { sno: 82, name: "सुरेंद्र कुमार", amount: 201 },
+                { sno: 83, name: "प्रतिमा देवी", amount: 100 },
+                { sno: 84, name: "शरद कुमार", amount: 200 },
+                { sno: 85, name: "जीपी पटेल", amount: 200 },
+                { sno: 86, name: "नीतेश कुमार", amount: 200 },
+                { sno: 87, name: "परमात्मा राम", amount: 100 },
+                { sno: 88, name: "सुबोध राम", amount: 100 },
+                { sno: 89, name: "अजीत कुमार प्रजापति", amount: 100 },
+                { sno: 90, name: "आरजी प्रजापति", amount: 100 },
+                { sno: 91, name: "रामदास प्रजापति", amount: 500 },
+                { sno: 92, name: "रामरतन", amount: 100 },
+                { sno: 93, name: "सूर्यप्रकाश पाल", amount: 50 },
+                { sno: 94, name: "संतरा देवी व्यास", amount: 100 },
+                { sno: 95, name: "Dr. Ram Singh", amount: 100 }
+            ]
+        };
+        
+        async function loadMembersData() {
+            try {
+                // Try to fetch from Google Sheets CSV first
+                if (GOOGLE_SHEETS_CSV_URL !== 'YOUR_GOOGLE_SHEET_CSV_URL') {
+                    const response = await fetch(GOOGLE_SHEETS_CSV_URL);
+                    
+                    if (response.ok) {
+                        const csvText = await response.text();
+                        const data = parseCSVData(csvText);
+                        updatePageWithData(data);
+                        return;
+                    }
+                }
+                
+                // Use fallback data if Google Sheets fails
+                console.log('Using fallback data');
+                updatePageWithData(FALLBACK_DATA);
+                
+            } catch (error) {
+                console.log('Using fallback data:', error.message);
+                updatePageWithData(FALLBACK_DATA);
+            }
+        }
+        
+        function parseCSVData(csvText) {
+            const lines = csvText.split('\n');
+            const members = [];
+            let totalAmount = 0;
+            
+            // Skip header row and process data
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line) {
+                    const columns = line.split(',');
+                    if (columns.length >= 3) {
+                        const sno = parseInt(columns[0]) || i;
+                        const name = columns[1].replace(/"/g, '').trim();
+                        const amount = parseInt(columns[2]) || 0;
+                        
+                        if (name && amount > 0) {
+                            members.push({ sno, name, amount });
+                            totalAmount += amount;
+                        }
+                    }
+                }
+            }
+            
+            return {
+                totalMembers: members.length,
+                totalAmount: totalAmount,
+                members: members
+            };
+        }
+        
+        function updatePageWithData(data) {
+            // Update stats
+            document.getElementById('totalMembers').textContent = data.totalMembers;
+            
+            // Generate members grid
+            const membersGrid = document.getElementById('membersGrid');
+            membersGrid.innerHTML = '';
+            
+            data.members.forEach(member => {
+                const memberItem = document.createElement('div');
+                memberItem.className = 'member-item';
+                memberItem.innerHTML = `
+                    <span class="name">${member.sno}. ${member.name}</span> 
+                    <span class="amount">₹${member.amount}</span>
+                `;
+                membersGrid.appendChild(memberItem);
+            });
+            
+            // Hide loading
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadMembersData);
+        
+        // Refresh data every 5 minutes
+        setInterval(loadMembersData, 5 * 60 * 1000);
+    </script>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

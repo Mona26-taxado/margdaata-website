@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Setup Guide - Margdata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .step {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .code {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        .important {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .highlight {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔗 Connect Your Google Sheet to Website</h1>
+    
+    <div class="step">
+        <h2>Step 1: Set Up Your Google Sheet</h2>
+        <p>Create a Google Sheet with this exact structure:</p>
+        <div class="code">
+S.No,Name,Amount
+1,अमरजीत प्रसाद,500
+2,शैलेश कुमार,200
+3,संजय मिश्रा,501
+4,उपेन्द्र कुमार,100
+5,निर्भय कुमार,100
+        </div>
+        <p><strong>Important:</strong> First row must be headers: S.No, Name, Amount</p>
+    </div>
+
+    <div class="step">
+        <h2>Step 2: Make Sheet Public</h2>
+        <ol>
+            <li>Open your Google Sheet</li>
+            <li>Click <strong>"Share"</strong> button (top right)</li>
+            <li>Click <strong>"Change to anyone with the link"</strong></li>
+            <li>Set permission to <strong>"Viewer"</strong></li>
+            <li>Click <strong>"Done"</strong></li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>Step 3: Get CSV URL</h2>
+        <ol>
+            <li>In your Google Sheet, go to <strong>File → Share → Publish to web</strong></li>
+            <li>Choose <strong>"Entire Document"</strong></li>
+            <li>Format: <strong>"CSV"</strong></li>
+            <li>Click <strong>"Publish"</strong></li>
+            <li>Copy the URL that appears</li>
+        </ol>
+        <div class="highlight">
+            <strong>Your URL will look like:</strong><br>
+            https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub?output=csv
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Step 4: Update Your Website</h2>
+        <p>Open <code>tribute.html</code> and find this line:</p>
+        <div class="code">
+const GOOGLE_SHEETS_CSV_URL = 'YOUR_GOOGLE_SHEET_CSV_URL';
+        </div>
+        <p>Replace <code>'YOUR_GOOGLE_SHEET_CSV_URL'</code> with your actual URL:</p>
+        <div class="code">
+const GOOGLE_SHEETS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub?output=csv';
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Step 5: Test It</h2>
+        <ol>
+            <li>Add a new row to your Google Sheet</li>
+            <li>Refresh your tribute page</li>
+            <li>New data should appear automatically!</li>
+        </ol>
+    </div>
+
+    <div class="important">
+        <h3>⚠️ Important Notes:</h3>
+        <ul>
+            <li>Your Google Sheet must be public (anyone with link can view)</li>
+            <li>First row must be headers: S.No, Name, Amount</li>
+            <li>Amount should be numbers only (no ₹ symbol in sheet)</li>
+            <li>Website updates every 5 minutes automatically</li>
+            <li>If Google Sheets fails, it uses fallback data</li>
+        </ul>
+    </div>
+
+    <div class="success">
+        <h3>✅ Benefits:</h3>
+        <ul>
+            <li>No coding required to update data</li>
+            <li>Real-time updates from Google Sheets</li>
+            <li>Automatic calculation of totals</li>
+            <li>Works immediately after setup</li>
+            <li>Free to use</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>🔧 Troubleshooting</h2>
+        <p><strong>If data doesn't update:</strong></p>
+        <ol>
+            <li>Check that your sheet is public</li>
+            <li>Verify the CSV URL is correct</li>
+            <li>Make sure first row has headers</li>
+            <li>Check browser console for errors</li>
+        </ol>
+    </div>
+
+    <div class="highlight">
+        <h3>🎯 Quick Test:</h3>
+        <p>After setup, try adding a test row to your Google Sheet:</p>
+        <div class="code">
+96,Test Member,1000
+        </div>
+        <p>Refresh your tribute page after 5 minutes to see the update!</p>
+    </div>
+</body>
+</html>
+
